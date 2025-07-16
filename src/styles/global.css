@@ -1,0 +1,26 @@
+:root {
+  /* Color principal — granate */
+  --color-primary: #800020;
+
+  /* Colores secundarios */
+  --color-secondary-1: #ffd700; /* dorado, para llamar la atención en detalles */
+  --color-secondary-2: #005f73; /* verde azulado, contraste frío vs cálido */
+  --color-secondary-3: #f4f4f4; /* gris claro, para fondos suaves */
+  --color-text: #333333; /* texto principal */
+  --color-bg: #ffffff; /* fondo general */
+}
+
+/* Reset global y tipografía base */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
