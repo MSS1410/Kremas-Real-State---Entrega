@@ -1,0 +1,41 @@
+.favorites-page {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.favorites-page h2 {
+  font-size: 2rem;
+  font-weight: 200;
+  color: var(--color-primary);
+
+  padding: 2rem;
+}
+
+.favorites-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+.favorites-empty {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--color-text);
+  margin-top: 2rem;
+}
+
+/* Tablet 1024 */
+@media (max-width: 1024px) {
+  .favorites-page h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Móvil 768 */
+@media (max-width: 768px) {
+  .favorites-list {
+    gap: 1.5rem;
+  }
+}

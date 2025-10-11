@@ -1,0 +1,155 @@
+.property-page {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.property-page__back {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+/* slide */
+.gallery-slider {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  max-height: 600px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.gallery-arrow.left {
+  left: 16px;
+}
+.gallery-arrow.right {
+  right: 16px;
+}
+.gallery-counter {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+.gallery-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 1.2rem;
+}
+
+/* details */
+.property-page__details {
+  margin-bottom: 2rem;
+}
+.property-page__title {
+  font-size: 2rem;
+  color: var(--color-primary);
+  font-weight: 300;
+  margin: 0 0 2rem;
+}
+.property-page__location,
+.property-page__price {
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: black;
+  margin: 0.5rem 0;
+}
+.property-val {
+  font-size: 1rem;
+  font-weight: 200;
+  color: var(--color-secondary-2);
+  margin: 1.5rem 0;
+}
+.property-page__price {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--color-primary);
+}
+.property-page__description {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: black;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+/* Consulta */
+.property-page__contact {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: var(--color-secondary-3);
+}
+.property-page__contact h2 {
+  font-weight: 200;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.contact-form textarea {
+  grid-column: 1 / -1;
+  resize: vertical;
+  min-height: 120px;
+}
+.contact-form button {
+  grid-column: 1 / -1;
+  padding: 0.75rem;
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  border: none;
+  border-radius: 4px;
+  font-weight: 200;
+  cursor: pointer;
+}
+.property-page__contact-ok {
+  background: #e0ffe0;
+  padding: 1rem;
+  border-radius: 4px;
+  color: #006600;
+}

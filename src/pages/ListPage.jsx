@@ -1,40 +1,35 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom'
-import { properties } from '../data/properties'
 import PropertyCard from '../components/PropertyCard'
+import useProperties from '../hooks/useProperties'
+import '../styles/ListPage.css'
 
 export default function ListinPage() {
-  const { search } = useLocation()
-  const params = new URLSearchParams(search)
-
-  const city = params.get('city') || ''
-  const minPrice = parseFloat(params.get('minPrice')) || 0
-  const maxPrice = parseFloat(params.get('maxPrice')) || infinite
-  const category = params.get('category') || ''
-
-  const filteredResults = properties.filter((prope) => {
-    const sameCity =
-      !city || prope.city.toLowerCase().includes(city.toLoweCase())
-
-    const sameCategory = !category || prope.category === category
-    const sameMinPrice = prope.price >= minPrice
-    const sameMaxPrice = prope.price <= maxPrice
-
-    return sameCategory && sameMinPrice && sameMaxPrice && sameCity
-  })
+  const filteredResults = useProperties()
+  const count = filteredResults.length
 
   return (
-    <section className='listings'>
-      {filteredResults.length > 0 ? (
-        filteredResults.map((prop) => (
-          <PropertyCard key={prop.id} property={prop} />
-        ))
-      ) : (
-        <p className='listings__no-results'>
-          No se encontraron inmuebles que coincidan con los criterios de
-          busqueda.
+    <section className='listings-page'>
+      {/* HEADER CON numero de inmuebles */}
+      <div className='list-header'>
+        <p>
+          {count}{' '}
+          {count === 1 ? 'inmueble disponible' : 'inmuebles disponibles'}
         </p>
-      )}
+      </div>
+
+      {/* contenedor de PropertyCard */}
+      <div className='listings'>
+        {filteredResults.length > 0 ? (
+          filteredResults.map((prope) => (
+            <PropertyCard key={prope.id} property={prope} />
+          ))
+        ) : (
+          <p className='listings__no-results'>
+            No se encontraron inmuebles que coincidan con los criterios de
+            búsqueda.
+          </p>
+        )}
+      </div>
     </section>
   )
 }

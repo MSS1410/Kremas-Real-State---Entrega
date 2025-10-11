@@ -1,16 +1,18 @@
 :root {
   /* Color principal — granate */
-  --color-primary: #800020;
-
+  --color-primary: #4f0215;
+  --color-fondo: rgba(168, 168, 138, 0.62);
+  --color-cuartiary: #8a1f3a;
   /* Colores secundarios */
   --color-secondary-1: #ffd700; /* dorado, para llamar la atención en detalles */
-  --color-secondary-2: #005f73; /* verde azulado, contraste frío vs cálido */
+  --color-secondary-2: #cacaca; /* verde azulado, contraste frío vs cálido */
   --color-secondary-3: #f4f4f4; /* gris claro, para fondos suaves */
-  --color-text: #333333; /* texto principal */
+  --color-text: #bfbcbc; /* texto principal */
+  --color-text2: rgba(0, 119, 0, 0.578);
   --color-bg: #ffffff; /* fondo general */
 }
 
-/* Reset global y tipografía base */
+/* Reset global y tipo base */
 *,
 *::before,
 *::after {
@@ -23,4 +25,23 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: var(--color-bg);
   color: var(--color-text);
+}
+
+/* 
+   breakpoints globales
+ */
+
+/* Tablet 1024 */
+@media (max-width: 1024px) {
+  /* adjuste root fontsize para escalarlo todo */
+  html {
+    font-size: 90%;
+  }
+}
+
+/* Móvil 768 */
+@media (max-width: 768px) {
+  html {
+    font-size: 85%;
+  }
 }

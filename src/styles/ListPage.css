@@ -1,0 +1,48 @@
+/* container principal */
+.listings-page {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* header del listado */
+.list-header {
+  width: 100%;
+  text-align: left;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.list-header p {
+  font-size: 2rem;
+  font-weight: 200;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+/* container de las tarjetas */
+.listings {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* ajuste para  cada tarjeta */
+.property-card {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* msg sin resultados */
+.listings__no-results {
+  font-size: 1.1rem;
+  color: var(--color-text);
+  text-align: center;
+  padding: 2rem 0;
+}

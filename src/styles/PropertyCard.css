@@ -1,0 +1,83 @@
+/* container principal de la tarjeta */
+.property-card {
+  display: flex;
+  background-color: var(--color-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 350px;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+/* hoover */
+.property-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* img ocupa 50% */
+.property-card__media {
+  flex: 1 1 50%;
+  position: relative;
+}
+.property-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* button de favorito */
+.property-card__fav-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  transition: background 0.2s;
+}
+.property-card__fav-btn:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+/* details ocupa 50% */
+.property-card__details {
+  flex: 1 1 50%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.property-card__title {
+  font-size: 1.75rem;
+  font-weight: 2;
+  color: var(--color-primary);
+  margin-top: 10px;
+}
+
+.property-card__location {
+  font-size: 1.5rem;
+  color: black;
+  margin-bottom: 100px;
+  font-weight: 100;
+}
+
+.property-card__price {
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: var(--color-primary);
+  margin: 0.5rem 0;
+}
